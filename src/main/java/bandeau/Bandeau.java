@@ -1,5 +1,5 @@
 package bandeau;
-
+/*TEST*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.RenderingHints;
