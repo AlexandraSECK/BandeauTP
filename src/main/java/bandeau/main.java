@@ -15,7 +15,7 @@ public class main {
 	 Bandeau monBandeau = new Bandeau();
          Scenario s = new Scenario();
          s.addEffect(new ChangerDePolice("Monospaced","BOLD",20,"Changement de Police"),1);
-         s.addEffect(new Zoom(2,"Zoom"),2);
+         s.addEffect(new Zoom(2,"Zoom x2"),2);
          s.addEffect(new ChangerDeCouleur("Changement de couleur"),5);
          s.addEffect(new Tourner("On tourne maintenant", 1, 90),1);
          s.playOn(monBandeau);
