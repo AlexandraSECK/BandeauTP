@@ -24,15 +24,16 @@ public class Zoom extends Effet {
     void afficheToiSur(Bandeau b) {
         b.setMessage(texte);
         b.sleep(500);
-        int a= b.getFont().getSize();      
+        Font oldFont=b.getFont();
+        int a= oldFont.getSize();      
         for (int i = a; i <a*coefficient ; i+=2) {
-            Font f=b.getFont().deriveFont(i);
-            System.out.println(f.getSize());
-
-            b.setFont(b.getFont().deriveFont(i));
+            Font newFont = oldFont.deriveFont((float)i);
+            b.setFont(newFont);
 		b.sleep(100);
+            b.setFont(oldFont);    
 	}
     }
     
     
 }
+
